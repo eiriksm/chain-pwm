@@ -1,0 +1,24 @@
+{
+  "name": "chain-pwm",
+  "version": "1.0.0",
+  "description": "chain-pwm =========",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eiriksm/chain-pwm.git"
+  },
+  "author": "Eirik S. Morland <eirik@morland.no>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/eiriksm/chain-pwm/issues"
+  },
+  "homepage": "https://github.com/eiriksm/chain-pwm",
+  "devDependencies": {
+    "istanbul": "^0.3.2",
+    "mocha": "^2.0.1",
+    "should": "^4.1.0"
+  }
+}
