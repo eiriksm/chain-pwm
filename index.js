@@ -16,7 +16,7 @@ util.inherits(PwmChainer, events.EventEmitter);
 PwmChainer.prototype.then = function(value, ms) {
   this.steps.push({value: value, ms: ms});
   return this;
-}
+};
 
 PwmChainer.prototype.start = function() {
   var p = this;
@@ -30,6 +30,6 @@ PwmChainer.prototype.start = function() {
       steps.splice(0, 1);
       recurse(steps);
     }, steps[0].ms);
-  }
+  };
   recurse(this.steps);
-}
+};
