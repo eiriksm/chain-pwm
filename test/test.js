@@ -13,13 +13,15 @@ describe('Module functionality', function() {
     Pc.should.be.instanceOf(Function);
   });
   it('Should do the expected', function(done) {
-    var p = new Pc(6, board);
-    p.then(1, 200)
+    var p = new Pc(6, board)
+    .begin(200)
+    .then(1, 200)
     .then(100, 300)
     .start();
     p.on('done', function() {
-      log[0].should.equal('board wrote 1 to pin 6');
-      log[1].should.equal('board wrote 100 to pin 6');
+      log[0].should.equal('board wrote 200 to pin 6');
+      log[1].should.equal('board wrote 1 to pin 6');
+      log[2].should.equal('board wrote 100 to pin 6');
       done();
     });
   });
