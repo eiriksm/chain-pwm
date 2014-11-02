@@ -13,6 +13,10 @@ function PwmChainer(pin, board) {
 
 util.inherits(PwmChainer, events.EventEmitter);
 
+PwmChainer.prototype.begin = function(value) {
+  this.steps.push({value: value, ms: 0});
+};
+
 PwmChainer.prototype.then = function(value, ms) {
   this.steps.push({value: value, ms: ms});
   return this;
@@ -25,8 +29,8 @@ PwmChainer.prototype.start = function() {
       p.emit('done');
       return;
     }
+    p.board.analogWrite(p.pin, steps[0].value);
     setTimeout(function() {
-      p.board.analogWrite(p.pin, steps[0].value);
       steps.splice(0, 1);
       recurse(steps);
     }, steps[0].ms);
