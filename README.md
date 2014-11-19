@@ -22,7 +22,7 @@ var Pc = require('chain-pwm');
 board.on('ready', function() {
   this.pinMode(6, five.Pin.PWM);
   // Constructs a new PWM chainer with pin 6 and the board.
-  var p = new Pc(6, board)
+  var p = new Pc(6, board);
   // Begin the output at 255
   p.begin(255)
   // Then write 100, and keep that level for 500ms
