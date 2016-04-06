@@ -18,7 +18,7 @@
   "homepage": "https://github.com/eiriksm/chain-pwm",
   "devDependencies": {
     "coveralls": "^2.11.2",
-    "istanbul": "^0.3.2",
+    "istanbul": "^0.4.3",
     "mocha": "^2.0.1",
     "should": "^8.3.0"
   }
